@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "388198921801",
+    "firebase_url": "https://logineregistro-6407f.firebaseio.com",
+    "project_id": "logineregistro-6407f",
+    "storage_bucket": "logineregistro-6407f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:388198921801:android:7ebcb22ff654c8df6c7198",
+        "android_client_info": {
+          "package_name": "com.example.logineregistro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "388198921801-p4efm3bmr8gmu164pnhgi71cvmbq69fr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.logineregistro",
+            "certificate_hash": "c971a08e2eedf5a61f3ac31ad577225c1817fe60"
+          }
+        },
+        {
+          "client_id": "388198921801-rvs3s1jn4919qbvbvionksqbbn8folt8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmXd8JGXQBY-wEnVdLmcTPS-9HYwclQmw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "388198921801-rvs3s1jn4919qbvbvionksqbbn8folt8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
