@@ -43,7 +43,7 @@ class ActivityLoginRegister : AppCompatActivity() {
         firebaseAuth = FirebaseAuth.getInstance()
         btCreateAccount = findViewById(R.id.btCreateAccount)
         btCreateAccount.setOnClickListener(View.OnClickListener {
-            viewModelRegister.validarCampo(etRegisterUserName.text.toString()
+            viewModelRegister.resgisterUser(etRegisterUserName.text.toString()
                     ,etRegisterUserLastName.text.toString()
                     ,etRegisterUserEmail.text.toString()
                     ,etRegisterUserPassword.text.toString())

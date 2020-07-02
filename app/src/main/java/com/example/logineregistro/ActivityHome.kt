@@ -22,6 +22,7 @@ class ActivityHome : AppCompatActivity() {
         btnLogout.setOnClickListener(View.OnClickListener {
             authRegister.signOut()
             Toast.makeText(this, "Tchau!", Toast.LENGTH_SHORT).show()
+            finish()
             val inToMain = Intent(this, FragmentLogin::class.java)
             startActivity(inToMain)
         })

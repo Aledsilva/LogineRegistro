@@ -11,7 +11,7 @@ class ViewModelRegister : ViewModel() {
     private val authRegister: FirebaseAuth = FirebaseAuth.getInstance()
     val user get() = authRegister.currentUser
 
-    fun validarCampo(name: String, lastName: String, email: String, pass: String) {
+    fun resgisterUser(name: String, lastName: String, email: String, pass: String) {
         if (name.isEmpty() || lastName.isEmpty() || email.isEmpty() || pass.isEmpty()) {
             validao.postValue(false)
             Log.i("VALIDACAO", "erro ao validar string")
