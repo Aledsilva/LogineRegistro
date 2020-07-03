@@ -13,7 +13,7 @@ import androidx.lifecycle.ViewModelProviders
 
 import com.google.firebase.auth.FirebaseAuth
 
-class ActivityLoginRegister : AppCompatActivity() {
+class FragmentRegister : AppCompatActivity() {
     lateinit var firebaseAuth: FirebaseAuth
     lateinit var etRegisterUserEmail: EditText
     lateinit var etRegisterUserPassword: EditText

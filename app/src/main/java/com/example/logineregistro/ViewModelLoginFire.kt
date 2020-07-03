@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.google.firebase.auth.FirebaseAuth
 
-class ViewModelLogin : ViewModel() {
+class ViewModelLoginFire : ViewModel() {
     val validinho = MutableLiveData<Boolean>()
     private val authLogin: FirebaseAuth = FirebaseAuth.getInstance()
     val user get() = authLogin.currentUser
@@ -13,9 +13,9 @@ class ViewModelLogin : ViewModel() {
     fun validaLogin(eMail: String, passWord: String){
         if (eMail.isEmpty() || passWord.isEmpty()) {
             validinho.postValue(false)
-        } else if (!(eMail.isEmpty() && passWord.isEmpty())) {
+        } else if (eMail.isNotEmpty() && passWord.isNotEmpty()) {
             authLogin.signInWithEmailAndPassword(eMail, passWord).addOnCompleteListener { task ->
-                if (!task.isSuccessful) {
+                if (task.isSuccessful) {
                     validinho.postValue(true)
                     Log.i("AUTENTICAÇÃO", "Bem-vindo ao App")
                 } else {

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#6299E1"
     android:padding="28dp"
-    tools:context=".ActivityLoginRegister">
+    tools:context=".FragmentRegister">
 
     <Button
         android:id="@+id/btCreateAccount"

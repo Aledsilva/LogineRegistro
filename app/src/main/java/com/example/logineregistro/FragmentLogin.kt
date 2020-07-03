@@ -16,13 +16,13 @@ import com.google.firebase.auth.FirebaseAuth.AuthStateListener
 class FragmentLogin : AppCompatActivity() {
     lateinit var logEmail: EditText
     lateinit var logPass: EditText
-    lateinit var logButton: Button
+    lateinit var loginFire: Button
     lateinit var txtToRegister: TextView
     lateinit var loginFirebaseAuth: FirebaseAuth
     lateinit var authStateListener: AuthStateListener
 
-    private val viewModelLogin by lazy {
-        ViewModelProviders.of(this).get(ViewModelLogin::class.java)
+    private val viewModelLoginFire by lazy {
+        ViewModelProviders.of(this).get(ViewModelLoginFire::class.java)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,7 +33,7 @@ class FragmentLogin : AppCompatActivity() {
         logEmail = findViewById(R.id.etLoginUserEmail)
         logPass = findViewById(R.id.etLoginUserPassword)
 
-        viewModelLogin.validinho.observe(this, Observer {
+        viewModelLoginFire.validinho.observe(this, Observer {
             if (it) {
                 startActivity(Intent(this, ActivityHome::class.java))
             } else {
@@ -42,12 +42,12 @@ class FragmentLogin : AppCompatActivity() {
         })
 
         loginFirebaseAuth = FirebaseAuth.getInstance()
-        logButton = findViewById(R.id.login)
-        logButton.setOnClickListener(View.OnClickListener {
-            viewModelLogin.validaLogin(logEmail.text.toString(), logPass.text.toString())
+        loginFire = findViewById(R.id.login)
+        loginFire.setOnClickListener(View.OnClickListener {
+            viewModelLoginFire.validaLogin(logEmail.text.toString(), logPass.text.toString())
         })
         authStateListener = AuthStateListener {
-            val firebaseUser = viewModelLogin.user
+            val firebaseUser = viewModelLoginFire.user
             if (firebaseUser != null) {
                 val intent = Intent(this, ActivityHome::class.java)
                 startActivity(intent)
@@ -55,7 +55,7 @@ class FragmentLogin : AppCompatActivity() {
             }
         }
         txtToRegister.setOnClickListener(View.OnClickListener {
-            val intSign = Intent(this, ActivityLoginRegister::class.java)
+            val intSign = Intent(this, FragmentRegister::class.java)
             startActivity(intSign)
         })
     }

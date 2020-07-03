@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ActivityHome"></activity>
-        <activity android:name=".ActivityLoginRegister" />
+        <activity android:name=".FragmentRegister" />
         <activity android:name=".FragmentLogin">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
